@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootStrapWrapper", "BootStrapWrapper.csproj", "{10B96921-C7FA-4038-9EA8-8B012D44371D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootStrapWrapper Runner", "..\Blazor UI Components Runner\BootStrapWrapper Runner.csproj", "{D3F9D2D0-79B8-4147-A1F8-E73FE6C10175}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10B96921-C7FA-4038-9EA8-8B012D44371D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B96921-C7FA-4038-9EA8-8B012D44371D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B96921-C7FA-4038-9EA8-8B012D44371D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B96921-C7FA-4038-9EA8-8B012D44371D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F9D2D0-79B8-4147-A1F8-E73FE6C10175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F9D2D0-79B8-4147-A1F8-E73FE6C10175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F9D2D0-79B8-4147-A1F8-E73FE6C10175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F9D2D0-79B8-4147-A1F8-E73FE6C10175}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BF987BF-7DDE-4F48-A5B9-027A664B34B3}
+	EndGlobalSection
+EndGlobal

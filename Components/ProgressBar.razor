@@ -1,0 +1,149 @@
+﻿<div class="progress" @attributes="@ToProgressStyling()">
+    <div class="progress-bar @ToStripeStyling()" @attributes="@ToBarStyling()" role="progressbar" aria-valuemax="@max" aria-valuemin="@min" aria-valuenow="@now">@label</div>
+</div>
+
+@code {
+    /// <summary>
+    /// 最小値を取得または設定します。
+    /// </summary>
+    [Parameter]
+    public int min
+    {
+        get;
+        set;
+    }
+    = 0;
+
+    /// <summary>
+    /// 最大値を取得または設定します。
+    /// </summary>
+    [Parameter]
+    public int max
+    {
+        get;
+        set;
+    }
+    = 100;
+
+    /// <summary>
+    /// 現在の値を取得または設定します。
+    /// </summary>
+    [Parameter]
+    public int now
+    {
+        get;
+        set;
+    }
+    = 0;
+
+    /// <summary>
+    /// ラベルを取得または設定します。
+    /// </summary>
+    [Parameter]
+    public string label
+    {
+        get;
+        set;
+    }
+    = string.Empty;
+
+    /// <summary>
+    /// 高さを取得または設定します。
+    /// </summary>
+    [Parameter]
+    public double? height
+    {
+        get;
+        set;
+    }
+    = null;
+
+    /// <summary>
+    /// 幅を取得または設定します。
+    /// </summary>
+    [Parameter]
+    public uint width
+    {
+        get;
+        set;
+    }
+    = 0;
+
+    /// <summary>
+    /// 縞模様にするかを取得または設定します。
+    /// </summary>
+    [Parameter]
+    public bool striped
+    {
+        get;
+        set;
+    }
+    = false;
+
+    /// <summary>
+    /// 縞模様に対してアニメーションするかを取得または設定します。
+    /// </summary>
+    [Parameter]
+    public bool animated
+    {
+        get;
+        set;
+    }
+
+    /// <summary>
+    /// プログレスバーのスタイルを取得します。
+    /// </summary>
+    /// <returns>文字列</returns>
+    private Dictionary<string, object> ToBarStyling()
+    {
+        var result = new Dictionary<string, object>();
+        result.Add("style", ToWidthStyling());
+        return result;
+    }
+
+    /// <summary>
+    /// 幅のスタイルを取得します。
+    /// </summary>
+    /// <returns>文字列。</returns>
+    private string ToWidthStyling()
+    {
+        return $"width: {this.width.ToString()}%;";
+    }
+
+    /// <summary>
+    /// プログレスバーのスタイルを取得します。
+    /// </summary>
+    /// <returns>文字列</returns>
+    private Dictionary<string, object> ToProgressStyling()
+    {
+        var result = new Dictionary<string, object>();
+        if (this.height.HasValue)
+        {
+            result.Add("style", ToHeightStyling());
+        }
+        return result;
+    }
+
+    /// <summary>
+    /// 高さのスタイルを取得します。
+    /// </summary>
+    /// <returns>文字列。</returns>
+    private string ToHeightStyling()
+    {
+        return $"height: {this.height.Value.ToString("F2")}px;";
+    }
+
+    /// <summary>
+    /// 縞模様のスタイルを取得します。
+    /// </summary>
+    /// <returns></returns>
+    private string ToStripeStyling()
+    {
+        if (this.striped)
+        {
+            return $"progress-bar-striped{(this.animated ? " progress-bar-animated" : string.Empty)}";
+        }
+
+        return string.Empty;
+    }
+}

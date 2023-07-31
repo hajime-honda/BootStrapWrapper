@@ -1,0 +1,18 @@
+﻿# メモ
+
+## _imports.razor
+
+- まとめて参照を追加できるファイル
+
+## wwwrootフォルダ
+
+- CSSやJavaScript、画像など静的なファイルを置いておく場所
+
+## bootstrapのバージョンは 5.0.2
+
+### 参考になりそうなサイト
+https://learn.microsoft.com/ja-jp/training/modules/blazor-build-reusable-components/
+
+https://getbootstrap.jp/docs/5.0/getting-started/download/
+
+https://getbootstrap.jp/docs/5.0/components/progress/
